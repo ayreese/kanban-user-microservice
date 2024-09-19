@@ -1,14 +1,12 @@
 import express from 'express';
+import serverless from 'serverless-http';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
-
+// Define routes
 app.get('/', (req, res) => {
-    res.send('Hello, TypeScript with Express!');
+    res.send('User Service Running');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the app to be used in Lambda
+module.exports.handler = serverless(app);

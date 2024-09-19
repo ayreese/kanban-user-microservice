@@ -1,0 +1,79 @@
+{
+  "/Users/astro/Developer/kanban/kanban-user-microservice": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.0",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/astro/Developer/kanban/kanban-user-microservice",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "kanban-user-microservice",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "region": "us-east-1",
+        "stage": "dev",
+        "versionFunctions": true
+      },
+      "functions": {
+        "userService": {
+          "handler": "index.handler",
+          "events": [
+            {
+              "http": {
+                "path": "users",
+                "method": "get"
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "service: kanban-user-microservice\n\nprovider:\n    name: aws\n    runtime: nodejs18.x\n    region: us-east-1\n\nfunctions:\n    userService:\n        handler: index.handler\n        events:\n            - http:\n                  path: users\n                  method: get\n\nplugins:\n    - serverless-offline",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (file:///Users/astro/.serverless/releases/4.4.0/package/dist/sf-core.js:912:2671)\n    at async PluginManager.loadAllPlugins (file:///Users/astro/.serverless/releases/4.4.0/package/dist/sf-core.js:912:1293)\n    at async Serverless.init (file:///Users/astro/.serverless/releases/4.4.0/package/dist/sf-core.js:919:9930)\n    at async runFramework (file:///Users/astro/.serverless/releases/4.4.0/package/dist/sf-core.js:942:1236)\n    at async route (file:///Users/astro/.serverless/releases/4.4.0/package/dist/sf-core.js:968:14018)\n    at async Object.run2 [as run] (file:///Users/astro/.serverless/releases/4.4.0/package/dist/sf-core.js:968:14419)\n    at async run3 (file:///Users/astro/.serverless/releases/4.4.0/package/dist/sf-core.js:968:15683)",
+      "code": "PLUGIN_NOT_FOUND"
+    },
+    "params": {},
+    "machineId": "9599d5254066a151aaac9bbed4e92ccb",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "4b03952c-ed3b-4f25-afc7-f1dc13713536",
+    "orgName": "kanban",
+    "userId": "BS5WZDNqR4dGST7zCM",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "kanban",
+    "subscription": null,
+    "userEmail": "alexis@alexisyemil.io",
+    "projectType": "traditional",
+    "versionSf": "4.4.0",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
